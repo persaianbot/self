@@ -18,7 +18,7 @@ return {
   description = "a Usefull plugin for sudo !",  
   usage = "A plugins to add Another plugins to the server",
   patterns = {
-    "^([Aa]ddplug) +(.+) (.*)$"
+    "^#addplug +(.+) (.*)$" 
   },
   run = run
 }
