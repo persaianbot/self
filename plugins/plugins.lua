@@ -178,7 +178,7 @@ return {
     "^#plugins? (-) ([%w_%.%-]+)$",
     "^#plugins? (enable) ([%w_%.%-]+) (chat)",
     "^#plugins? (disable) ([%w_%.%-]+) (chat)",
-    "^#plugins? (r)$" },
+    "^#plugins? (reloaf)$" },
   run = run
 }
 
