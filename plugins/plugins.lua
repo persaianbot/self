@@ -142,7 +142,7 @@ local function run(msg, matches)
     end
 
     -- Enable a plugin
-    if matches[1] == 'enable' then
+    if matches[1] == '+' then
       local plugin_name = matches[2]
       print("enable: "..matches[2])
       return enable_plugin(plugin_name)
@@ -157,7 +157,7 @@ local function run(msg, matches)
     end
 
     -- Disable a plugin
-    if matches[1] == 'disable' then
+    if matches[1] == '-' then
       print("disable: "..matches[2])
       return disable_plugin(matches[2])
     end
@@ -174,8 +174,8 @@ end
 return {
   patterns = {
     "^#plugins$",
-    "^#plugins? (enable) ([%w_%.%-]+)$",
-    "^#plugins? (disable) ([%w_%.%-]+)$",
+    "^#plugins? (+) ([%w_%.%-]+)$",
+    "^#plugins? (-) ([%w_%.%-]+)$",
     "^#plugins? (enable) ([%w_%.%-]+) (chat)",
     "^#plugins? (disable) ([%w_%.%-]+) (chat)",
     "^#plugins? (reload)$" },
