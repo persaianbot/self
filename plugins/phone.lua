@@ -1,5 +1,5 @@
 local function run(msg, matches ) 
-  if matches[1] == "phone" then
+  if matches[1] == "myphone" then
     return " your phone number\n"..msg.from.phone
 
 reply_msg(reply_id, info, ok_cb, false)
@@ -7,7 +7,7 @@ end
 
 return {
   patterns ={
-    "^([Pp]hone)$"
+    "^([Mm]yphone)"
  
 }, 
   run = run 
