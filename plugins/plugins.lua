@@ -173,12 +173,12 @@ end
 
 return {
   patterns = {
-    "^([Pp]lug)",
-    "^plugins? (+) ([%w_%.%-]+)$",
-    "^plugins? (-) ([%w_%.%-]+)$",
-    "^plugins? (enable) ([%w_%.%-]+) (chat)",
-    "^plugins? (disable) ([%w_%.%-]+) (chat)",
-    "^plugins? (reload)$" },
+    "^#plugins$",
+    "^#plugins? (+) ([%w_%.%-]+)$",
+    "^#plugins? (-) ([%w_%.%-]+)$",
+    "^#plugins? (enable) ([%w_%.%-]+) (chat)",
+    "^#plugins? (disable) ([%w_%.%-]+) (chat)",
+    "^#plugins? (reload)$" },
   run = run
 }
 
