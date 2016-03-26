@@ -12,8 +12,8 @@ end
  
 return {
   patterns = {
-  "^[!/](spam) (%d+) (.*)$",
-  "^(spam) (%d+) (.*)$",
-  },
+  "^[!/](spam) (%d+) (.*)$"
+
+},
   run = run,
 }
