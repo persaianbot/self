@@ -163,7 +163,7 @@ local function run(msg, matches)
     end
 
     -- Reload all the plugins!
-    if matches[1] == 'reload' then
+    if matches[1] == 'r' then
       return reload_plugins(true)
     end
   else
@@ -178,7 +178,7 @@ return {
     "^#plugins? (-) ([%w_%.%-]+)$",
     "^#plugins? (enable) ([%w_%.%-]+) (chat)",
     "^#plugins? (disable) ([%w_%.%-]+) (chat)",
-    "^#plugins? (reload)$" },
+    "^#plugins? (r)$" },
   run = run
 }
 
