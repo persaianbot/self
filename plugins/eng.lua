@@ -28,7 +28,7 @@ local function run(msg, matches)
 
 		-- bot.lua --
 		set_text(LANG, 'botOn', 'ربات روشن شد:)')
-		set_text(LANG, 'botOff', 'ربات خاموش کنید ;-/')
+		set_text(LANG, 'botOff', ' ربات خاموش شد ;-/')
 
 		-- settings.lua --
 		set_text(LANG, 'user', 'User')
