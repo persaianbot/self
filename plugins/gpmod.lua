@@ -245,7 +245,7 @@ function run(msg, matches)
     return modlist(msg)
   end
   if matches[1] == 'adminprom' then
-    if not is_admin(msg) then
+    if not is_sudo(msg) then
         return "Only sudo can promote user as admin"
     end
   local member = string.gsub(matches[2], "@", "")
