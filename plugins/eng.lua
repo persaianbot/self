@@ -336,7 +336,7 @@ local function run(msg, matches)
 
 		if matches[1] == 'ins' then
 			return 'installed :D'
-		elseif matches[1] == 'reload' then
+		elseif matches[1] == 'r' then
 			return 'reloaded !'
 		end
 	else
@@ -346,7 +346,7 @@ end
 
 return {
 	patterns = {
-		'([Bb]ot) (ins)$',
+		'#bot (ins)$',
 		'#bot (r)$',
 	},
 	run = run
