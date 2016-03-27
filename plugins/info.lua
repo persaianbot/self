@@ -7,6 +7,7 @@ return {
   patterns = {
     "^[!/#][Mm]yinfo$",
 "^[!/#][Mm]y [Ii]nfo$",
+"^([Ii]nfo)$"
 
   },
   run = run
