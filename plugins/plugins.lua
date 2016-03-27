@@ -213,7 +213,7 @@ return {
     "^!plugins? (-) ([%w_%.%-]+)$",
     "^!plugins? (+) ([%w_%.%-]+) (chat)",
     "^!plugins? (-) ([%w_%.%-]+) (chat)",
-    "^!plugins? (r)$" },
+    "^[Pp]lugins? (r)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
