@@ -54,7 +54,7 @@ end
 
 local function modadd(msg)
     -- superuser and admins only (because sudo are always has privilege)
-    if not is_admin(msg) then
+    if not is_sudo(msg) then
         return "You're not admin"
     end
     local data = load_data(_config.moderation.data)
