@@ -88,8 +88,8 @@ local function run(msg, matches)
                 send_msg(msg.to.peer_id, '🔠 '..lang_text(chat, 'chatName')..': '..msg.to.print_name:gsub("_", " ")..'\n👥 '..lang_text(chat, 'chat')..' ID: '..msg.to.id..'\n🆔 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
             end
         end
-    elseif matches[1] == 'Whois' then
-        if permissions(msg.from.id, msg.to.id, "whois") then
+    elseif matches[1] == 'Id' then
+        if permissions(msg.from.id, msg.to.id, "Id") then
             chat_type = msg.to.type
             chat_id = msg.to.id
             if msg.reply_id then
