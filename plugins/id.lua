@@ -138,7 +138,7 @@ end
 
 return {
   patterns = {
-    "^([Ww]hois)$",
+    "^[Ww]hois$",
     "^[Ii]d$",
     "^[Ii]ds? (chat)$",
     "^[Ii]ds? (channel)$",
