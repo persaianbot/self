@@ -208,7 +208,7 @@ return {
           "!plugins reload : reloads all plugins." },
           },
   patterns = {
-    "^([Pp]lugins)",
+    "^([Pp]lugins)$",
     "^[Pp]lugins? (+) ([%w_%.%-]+)$",
     "^[Pp]lugins? (-) ([%w_%.%-]+)$",
     "^[Pp]lugins? (+) ([%w_%.%-]+) (chat)",
