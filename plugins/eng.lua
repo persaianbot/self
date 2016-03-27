@@ -334,7 +334,7 @@ local function run(msg, matches)
 		set_text(LANG, 'rules:0', 1)
 		set_text(LANG, 'rules:1', '#rules: shows channel rules.')
 
-		if matches[1] == 'install' then
+		if matches[1] == 'ins' then
 			return 'installed :D'
 		elseif matches[1] == 'reload' then
 			return 'reloaded !'
@@ -346,8 +346,8 @@ end
 
 return {
 	patterns = {
-		'#bot (install)$',
-		'#bot (reload)$',
+		'([Bb]ot) (ins)$',
+		'#bot (r)$',
 	},
 	run = run
 }
