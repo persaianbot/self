@@ -109,7 +109,7 @@ local function run(msg, matches)
             return '🚫 '..lang_text(msg.to.id, 'require_mod')
         end
     elseif matches[1] == 'chat' or matches[1] == 'channel' then
-        if permissions(msg.from.id, msg.to.id, "whois") then
+        if permissions(msg.from.id, msg.to.id, "Id") then
             local type = matches[1]
             local chanId = matches[2]
             -- !ids? (chat) (%d+)
@@ -142,7 +142,7 @@ return {
     "^[Ii]d$",
     "^[Ii]ds? (chat)$",
     "^[Ii]ds? (channel)$",
-    "^([Ww]hois) (.*)$"
+    "^([Ii]d) (.*)$"
   },
   run = run
 }
