@@ -157,7 +157,7 @@ local function run(msg, matches)
   end
 
   -- Re-enable a plugin for this chat
-  if matches[1] == 'enable' and matches[3] == 'chat' then
+  if matches[1] == '+' and matches[3] == 'chat' then
     local receiver = get_receiver(msg)
     local plugin = matches[2]
     print("enable "..plugin..' on this chat')
