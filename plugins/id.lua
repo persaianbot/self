@@ -5,7 +5,6 @@ local function run(msg, matches )
 end
 return {
   patterns ={
-    "^Id$",
     "^([Ii]d)"
 },
   run = run
