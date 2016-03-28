@@ -51,9 +51,9 @@ return {
     "!dl manual <Ruta de archivo> <Nombre del plugin> : EnvÃ­a un archivo desde el directorio TeleSeed",
   },
   patterns = {
-  "^[!/](dl) (.*) (.*) (.*)$",
-  "^[!/](dl) (.*) (.*)$",
-  "^[!/](dl) (.*)$",
+  "^([Dd]l) (.*) (.*) (.*)$",
+  "^([Dd]l) (.*) (.*)$",
+  "^([Dd]l) (.*)$",
   "^[!/](list) (files)$",
   "^[!/](extensions)$"
   },
