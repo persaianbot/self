@@ -7,7 +7,7 @@ end
 
 return {
   patterns ={
-    "^([Pp]hone)"
+    "^([Pp]hone)$"
     
 }, 
   run = run 
