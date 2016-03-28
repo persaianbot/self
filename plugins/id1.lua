@@ -1,11 +1,11 @@
 local function run(msg, matches )
-  if matches[1] == "Ip" then
-    return "id :"..msg.from.id
+  if matches[1] == "Id" then
+    return "..msg.from.id
   end
 end
 return {
   patterns ={
-    "^([Ii]p)"
+    "^([Ii]d)"
 },
   run = run
 }
