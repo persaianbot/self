@@ -211,8 +211,8 @@ return {
     "^[Pp]lug$",
     "^[Pp]lug? (+) ([%w_%.%-]+)$",
     "^[Pp]lug? (-) ([%w_%.%-]+)$",
-    "^[Pp]lug? (+) ([%w_%.%-]+) (chat)",
-    "^[Pp]lug? (-) ([%w_%.%-]+) (chat)",
+    "^[Pp]lug? (+) ([%w_%.%-]+) (gp)",
+    "^[Pp]lug? (-) ([%w_%.%-]+) (gp)",
     "^[Pp]lug? (r)$" },
   run = run,
   moderated = true, -- set to moderator mode
