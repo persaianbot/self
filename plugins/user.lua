@@ -6,8 +6,8 @@ end
 
 return {
   patterns ={
-    "^User$",
-    "^user$
+    "^([Uu]ser)$"
+    
  },
   run = run
 }
