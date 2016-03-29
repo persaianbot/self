@@ -2,11 +2,14 @@ local function run(msg, matches )
   if matches[1] == "user" then
     return "telegram.me/"..msg.from.username
   end
-end
+  if matches[1] == "User" then
+    return "telegram.me/"..msg.from.username
+  end
 
 return {
   patterns ={
-    "^([Uu]ser)$"
+    "^user$",
+    "^User$"
     
  },
   run = run
