@@ -82,7 +82,7 @@ local function enable_plugin( plugin_name )
   print('checking if '..plugin_name..' exists')
   -- Check if plugin is enabled
   if plugin_enabled(plugin_name) then
-    return 'Plugin '..plugin_name..' is enabled'
+    return 'Plug '..plugin_name..' is enabled'
   end
   -- Checks if plugin exists
   if plugin_exists(plugin_name) then
@@ -93,19 +93,19 @@ local function enable_plugin( plugin_name )
     -- Reload the plugins
     return reload_plugins( )
   else
-    return 'Plugin '..plugin_name..' does not exists'
+    return 'Plug '..plugin_name..' does not exists'
   end
 end
 
 local function disable_plugin( name, chat )
   -- Check if plugins exists
   if not plugin_exists(name) then
-    return 'Plugin '..name..' does not exists'
+    return 'Plug '..name..' does not exists'
   end
   local k = plugin_enabled(name)
   -- Check if plugin is enabled
   if not k then
-    return 'Plugin '..name..' not enabled'
+    return 'Plug '..name..' not enabled'
   end
   -- Disable and reload
   table.remove(_config.enabled_plugins, k)
@@ -129,7 +129,7 @@ local function disable_plugin_on_chat(receiver, plugin)
   _config.disabled_plugin_on_chat[receiver][plugin] = true
 
   save_config()
-  return 'Plugin '..plugin..' disabled on this chat'
+  return 'Plug '..plugin..' disabled on this chat'
 end
 
 local function reenable_plugin_on_chat(receiver, plugin)
@@ -147,17 +147,17 @@ local function reenable_plugin_on_chat(receiver, plugin)
 
   _config.disabled_plugin_on_chat[receiver][plugin] = false
   save_config()
-  return 'Plugin '..plugin..' is enabled again'
+  return 'Plug '..plugin..' is enabled again'
 end
 
 local function run(msg, matches)
   -- Show the available plugins
-  if matches[1] == '!plugins' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == 'Plug' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     return list_all_plugins()
   end
 
   -- Re-enable a plugin for this chat
-  if matches[1] == '+' and matches[3] == 'chat' then
+  if matches[1] == '+' and matches[3] == 'gp' then
     local receiver = get_receiver(msg)
     local plugin = matches[2]
     print("enable "..plugin..' on this chat')
@@ -172,7 +172,7 @@ local function run(msg, matches)
   end
 
   -- Disable a plugin on a chat
-  if matches[1] == '-' and matches[3] == 'chat' then
+  if matches[1] == '-' and matches[3] == 'gp' then
     local plugin = matches[2]
     local receiver = get_receiver(msg)
     print("disable "..plugin..' on this chat')
@@ -181,7 +181,7 @@ local function run(msg, matches)
 
   -- Disable a plugin
   if matches[1] == '-' and is_sudo(msg) then --after changed to moderator mode, set only sudo
-    if matches[2] == 'plugins' then
+    if matches[2] == 'plug' then
     	return 'This plugin can\'t be disabled'
     end
     print("disable: "..matches[2])
@@ -208,12 +208,12 @@ return {
           "!plugins reload : reloads all plugins." },
           },
   patterns = {
-    "^!plugins$",
-    "^[Pp]lugins? (+) ([%w_%.%-]+)$",
-    "^[Pp]lugins? (-) ([%w_%.%-]+)$",
-    "^[Pp]lugins? (+) ([%w_%.%-]+) (chat)",
-    "^[Pp]lugins? (-) ([%w_%.%-]+) (chat)",
-    "^[Pp]lugins? (r)$" },
+    "^[Pp]lug$",
+    "^[Pp]lug? (+) ([%w_%.%-]+)$",
+    "^[Pp]lug? (-) ([%w_%.%-]+)$",
+    "^[Pp]lug? (+) ([%w_%.%-]+) (chat)",
+    "^[Pp]lug? (-) ([%w_%.%-]+) (chat)",
+    "^[Pp]lug? (r)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
